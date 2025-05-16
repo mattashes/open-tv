@@ -42,13 +42,21 @@
       >
     </div>
     <div class="col">
-      <textarea
-        #mpvParams
-        id="mpvParams"
-        [(ngModel)]="settings.mpv_params"
-        placeholder="mpv params like: --hwdec auto. Don't touch this unless you know what you're doing!"
-        class="form-control"
-      ></textarea>
+      <div class="form-group">
+        <label for="mpvParams">MPV Parameters</label>
+        <input
+          type="text"
+          class="form-control"
+          id="mpvParams"
+          #mpvParams
+          [(ngModel)]="settings.mpv_params"
+          placeholder="--network-timeout=60 --retry-streams=10"
+        />
+        <small class="form-text text-muted">
+          Custom MPV parameters for stream playback. Current recommended values for connection issues:
+          --network-timeout=60 --retry-streams=10
+        </small>
+      </div>
     </div>
   </div>
 
