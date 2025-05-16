@@ -1,0 +1,110 @@
+.sidebar {
+  width: 85px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.tv-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.playlist-dropdown {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 15px;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.dropdown-header:hover {
+  background-color: var(--tile-bg);
+}
+
+.icon-arrow {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.icon-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.playlist-content {
+  padding-left: 10px;
+}
+
+.category-header {
+  padding: 15px 5px 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #8b949e;
+  white-space: nowrap;
+}
+
+.channel-group {
+  padding: 8px 5px;
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.channel-group:hover, .channel-group.active {
+  background-color: var(--tile-bg);
+}
+
+.nav-icons {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.nav-icon svg {
+  fill: var(--text-color);
+  width: 100%;
+  height: 100%;
+  transition: fill 0.2s;
+}
+
+.nav-icon:hover svg {
+  fill: var(--accent-color);
+} 
